@@ -1,0 +1,152 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f6fa;
+  --card-bg: #ffffff;
+  --text: #1f2933;
+  --muted: #546a7b;
+  --accent: #006d77;
+  --accent-light: #e0f4f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 20px 80px;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: var(--text);
+}
+
+section {
+  margin-bottom: 56px;
+  padding: 32px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+section header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+section header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .grid.two {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.card {
+  background: var(--accent-light);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 8px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+thead {
+  background: var(--accent-light);
+}
+
+td, th {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(84, 106, 123, 0.18);
+  text-align: left;
+}
+
+blockquote {
+  margin: 0;
+  padding: 18px 22px;
+  border-left: 4px solid var(--accent);
+  background: #f1f5f9;
+  border-radius: 0 12px 12px 0;
+  color: var(--muted);
+}
+
+footer {
+  padding: 40px 20px 60px;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer a {
+  font-weight: 600;
+}
